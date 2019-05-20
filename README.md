@@ -4,11 +4,6 @@ SunCalc-Java
 A tiny Java library for calculating sun/moon positions and phases
 
 
-## Usage example
-
-``` java
-// get today's sunlight times for London
-var times = SunCalc4JavaUtils.getTimes(new Date(), 31.87, 117.24);
 
 
 ## Reference
@@ -16,7 +11,7 @@ var times = SunCalc4JavaUtils.getTimes(new Date(), 31.87, 117.24);
 ### Sunlight times
 
 ``` java
-SunCalc4JavaUtils.getTimes(/*Date*/ date, /*Number*/ latitude, /*Number*/ longitude)
+SunCalc4JavaUtils.getTimes(/*Date*/ date, /*double*/ latitude, /*double*/ longitude)
 ```
 
 Returns an object with the following properties (each is a `Date` object):
@@ -39,7 +34,7 @@ Returns an object with the following properties (each is a `Date` object):
 | `dawn`          | dawn (morning nautical twilight ends, morning civil twilight starts)     |
 
 ```javascript
-SunCalc4JavaUtils.addTime(/*Number*/ angleInDegrees, /*String*/ morningName, /*String*/ eveningName)
+SunCalc4JavaUtils.addTime(/*double*/ angleInDegrees, /*String*/ morningName, /*String*/ eveningName)
 ```
 
 Adds a custom time when the sun reaches the given angle to results returned by `SunCalc4JavaUtils.getTimes`.
@@ -50,7 +45,7 @@ Adds a custom time when the sun reaches the given angle to results returned by `
 ### Sun position
 
 ```javascript
-SunCalc4JavaUtils.getPosition(/*Date*/ timeAndDate, /*Number*/ latitude, /*Number*/ longitude)
+SunCalc4JavaUtils.getPosition(/*Date*/ timeAndDate, /*double*/ latitude, /*double*/ longitude)
 ```
 
 Returns an object with the following properties:
@@ -64,7 +59,7 @@ Returns an object with the following properties:
 ### Moon position
 
 ```java
-SunCalc4JavaUtils.getMoonPosition(/*Date*/ timeAndDate, /*Number*/ latitude, /*Number*/ longitude)
+SunCalc4JavaUtils.getMoonPosition(/*Date*/ timeAndDate, /*double*/ latitude, /*double*/ longitude)
 ```
 
 Returns an object with the following properties:
@@ -107,7 +102,7 @@ The zenith angle can be used do draw the moon shape from the observers perspecti
 ### Moon rise and set times
 
 ```java
-SunCalc4JavaUtils.getMoonTimes(/*Date*/ date, /*Number*/ latitude, /*Number*/ longitude[, inUTC])
+SunCalc4JavaUtils.getMoonTimes(/*Date*/ date, /*double*/ latitude, /*double*/ longitude[, inUTC])
 ```
 
 Returns an object with the following properties:
